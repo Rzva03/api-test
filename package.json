@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://rzva03.github.io/movie-search-app",
+  "homepage": "https://rzva03.github.io/api-test",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
