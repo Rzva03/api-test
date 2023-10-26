@@ -30,10 +30,10 @@ const useForm = () => {
     }, []);
 
     const handleConvertHexToRgb = useCallback((hexColor) => {
-        hexColor.replace("#", "");
-        const red = parseInt(hexColor.substring(0, 2), 16);
-        const green = parseInt(hexColor.substring(2, 4), 16);
-        const blue = parseInt(hexColor.substring(4, 6), 16);
+        const hex = hexColor.replace("#", "");
+        const red = parseInt(hex.substring(0, 2), 16);
+        const green = parseInt(hex.substring(2, 4), 16);
+        const blue = parseInt(hex.substring(4, 6), 16);
         return `${red},${green},${blue}`;
     }, []);
 
@@ -70,6 +70,7 @@ const useForm = () => {
     }, [handleConvertHexToRgb, handleOnConvertXML, handleOnValidateXML, validateForm]);
 
     const handleOnCreatePdf = useCallback(async (jsonParam) => {
+        console.log("🚀 ~ file: useForm.js:73 ~ handleOnCreatePdf ~ jsonParam:", jsonParam)
         const options = {
             method: 'POST',
             body: JSON.stringify(jsonParam),
