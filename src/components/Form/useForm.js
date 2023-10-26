@@ -70,7 +70,6 @@ const useForm = () => {
     }, [handleConvertHexToRgb, handleOnConvertXML, handleOnValidateXML, validateForm]);
 
     const handleOnCreatePdf = useCallback(async (jsonParam) => {
-        console.log("🚀 ~ file: useForm.js:73 ~ handleOnCreatePdf ~ jsonParam:", jsonParam)
         const options = {
             method: 'POST',
             body: JSON.stringify(jsonParam),
